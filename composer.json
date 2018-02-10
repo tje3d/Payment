@@ -1,0 +1,34 @@
+{
+    "name": "tje3d/payment",
+    "description": "Payment",
+    "keywords": [
+        "payment",
+        "gateway",
+        "nextpay.ir"
+    ],
+    "authors": [
+        {
+            "name": "Moein",
+            "email": "tje3d@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tje3d\\Payment\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tje3d\\Payment\\PaymentServiceProvider"
+            ],
+            "aliases": {
+                "Payment": "Tje3d\\Payment\\Facade"
+            }
+        }
+    },
+}
